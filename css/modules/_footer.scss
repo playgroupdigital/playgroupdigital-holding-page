@@ -1,0 +1,149 @@
+footer {
+  margin: $gutter;
+  @include outer-container();
+  @include row();
+  font-family: $font-family;
+  font-weight: $base-font-weight;
+    @include media ($tablet){
+
+  }
+  @include media ($desktop){
+
+  }
+
+
+
+}
+
+
+.left {
+  @include pad();
+  @include media ($mobile){
+    @include span-columns (4);
+    @include omega();
+}
+
+  @include media ($tablet){
+    @include span-columns(5);
+    @include omega();
+  }
+  @include media ($desktop){
+    @include span-columns(3);
+
+  }
+}
+
+
+.center {
+  @include pad();
+
+  @include media ($mobile){
+    @include span-columns (4);
+    @include omega();
+  }
+
+  @include media ($tablet){
+    @include span-columns(7);
+
+  }
+  @include media ($desktop){
+    @include span-columns(6);
+  }
+
+}
+
+
+
+
+.right {
+  @include pad();
+  @include media ($mobile){
+  @include span-columns (2 of 4);
+  @include shift(1);
+
+
+  }
+
+  @include media ($tablet){
+  @include span-columns (6);
+  @include shift(3);
+  }
+  @include media ($desktop){
+    @include span-columns(3);
+     @include shift(0);
+  }
+
+}
+
+
+
+
+#mailchimp {
+@include clearfix();
+
+
+
+}
+  #mailchimp input {
+    border: medium none;
+     @include media ($mobile){
+    @include span-columns(4 of 4);
+    @include omega();
+    }
+
+    @include media ($tablet){
+    @include span-columns(3.5 of 7);
+    }
+
+    @include media ($desktop){
+    @include span-columns(3 of 6);
+  }
+
+
+
+  }
+#mailchimp input.email, #mailchimp input.name  {
+
+  color: #dadada;
+  border-bottom: 1px solid #dadada;
+   @include pad( default default default 0);
+
+
+
+
+
+}
+
+#mailchimp input.name {
+    @include media ($tablet){
+  @include omega();
+  }
+  @include media ($desktop){
+  @include omega();
+  }
+
+}
+
+
+
+#mailchimp input[type="submit"] {
+  @include pad( 0 0 default 0);
+  margin-top: $gutter;
+  background: #fff;
+  color: $grey;
+  text-decoration: underline;
+  font-weight: $base-font-weight;
+  text-align: left;
+  background: none;
+  cursor: pointer;
+  clear: both;
+
+
+}
+#mailchimp input[type="submit"]:hover {
+
+}
+
+
+
+textarea, input { outline: none; }
