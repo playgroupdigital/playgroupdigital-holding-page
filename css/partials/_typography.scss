@@ -1,5 +1,13 @@
+.anim {
+  visibility: hidden;
+}
 
-$font-family: Avenir;
+body {
+    -webkit-text-size-adjust: 100%;
+}
+
+
+$font-family:'AvenirNextLTW01-Regular';
 $base-line-height:1.333;
 $base-font-weight: 300;
 
@@ -15,6 +23,7 @@ $scale-5: modular-scale(5);
 html {
     -webkit-font-smoothing: antialiased;
     -webkit-transform: translateZ(0px);
+    -moz-osx-font-smoothing: grayscale;
     color: $grey;
 }
 
@@ -29,3 +38,5 @@ a {
   color: $light-grey;
   margin-top:-0.5em;
 }
+
+

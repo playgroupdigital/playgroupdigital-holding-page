@@ -6,46 +6,85 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
+               <link rel="stylesheet" href="css/style.css">
 
-        <link rel="stylesheet" href="css/style.css">
+           <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+         <script type="text/javascript" src="http://fast.fonts.net/jsapi/b946a5b1-e9c4-4bc0-9171-15b4ec28e3e9.js"></script>
+
+         <script type="text/javascript">
+    // first, create the object that contains
+    // configuration variables
+    MTIConfig = {};
+
+    // next, add a variable that will control
+    // whether or not FOUT will be prevented
+    MTIConfig.EnableCustomFOUTHandler = true // true = prevent FOUT
+</script>
+
+
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         <!--[if lte IE 8]>
             <script type="text/javascript" src="vendor/selectivizr.min.js"></script>
         <![endif]-->
         <!--[if lt IE 9]>
             <script src="js/vendor/html5shiv.js"></script>
+             <script src="js/vendor/respond.js"></script>
+             <style>
+             .anim {
+                visibility: visible !important;
+                }
+                .text h1{
+
+                    padding-top:100px;
+                    padding-bottom:100px;
+                }
+
+                .hero{
+                    height:80%;
+                }
+            </style>
         <![endif]-->
-         <script src="js/vendor/respond.js"></script>
+
+         <script src="js/vendor/viewport-units-buggyfill.js"></script>
+
     </head>
     <body>
 
 
+<header><div class="logo-wrap anim fadeIn" data-wow-duration="1s" data-wow-delay="0.5s"><div class="logo">
+                                        <svg width="150" height="56">
+                                          <image xlink:href="img/playgroup-digital-logo.svg" src="img/playgroup-digital-logo.png" width="150" height="56" />
+                                        </svg>
+                                </div>
+                          </div>
+
         <section class="hero">
-            <div class="text">
-                <h1>Text describing playgroup digital probably should go here. If you like
-It might even fade in, all fancy-like.</h1>
+            <div class="text anim fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                <h1>We’re a creative, brand focussed agency crafting memorable digital experiences that transform brands and captivate people.</h1>
             </div>
 
-        </section>
+        </section></header>
         <footer>
-        <div class="left">
+        <div class="left anim fadeIn" data-wow-duration="1s">
            <p> <a href="mailto:info@playgroupdigital.com">info@playgroupdigital.com</a></p>
             <p><a href="tel:02072518096">+44 (0) 20 7251 8096</a></p>
         </div>
-        <div class="center">
+        <div class="center   anim fadeIn" data-wow-duration="1s" >
 
 <!-- Begin MailChimp Signup Form -->
 <div id="mailchimp">
 <form action="//playgroup.us1.list-manage.com/subscribe/post?u=023203ff7770f58c466883713&amp;id=9eb90a74cd" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
     <div id="mc_embed_signup_scroll">
-    <p>Subscribe to our newsletter</p><p class="subline">Subline about why you should</p>
-    <input type="email" value="Email" name="EMAIL" class="required email" id="mce-EMAIL" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">
+    <p class="">Subscribe to our newsletter</p><p class="subline"></p>
+
 
 
         <input type="text" value="Name" name="NAME" class="required name" id="mce-NAME" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">
+        <input type="email" value="Email" name="EMAIL" class="required email"  id="mce-EMAIL" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">
 
     <div id="mce-responses" class="clear">
         <div class="response" id="mce-error-response" style="display:none"></div>
@@ -59,11 +98,44 @@ It might even fade in, all fancy-like.</h1>
 
 <!--End mc_embed_signup-->
         </div>
-        <div class="right">
-            <p>Social Icons here yeah i said it</p>
+        <div class="right anim fadeIn" data-wow-duration="1s"  >
+
+                        <div class="icon-wrap">
+                                    <div class="icon">
+                                         <a href="https://www.twitter.com/playgroupideas" title="Playgroup Digital Twitter"><svg width="24" height="24">
+                                                         <image xlink:href="img/twitter.svg" src="img/twitter.png" width="24" height="24" />
+                                         </svg>
+                                         </a>
+                                     </div>
+                                     <div class="icon" >
+                                     <a href="https://instagram.com/playgroupdigital" title="Playgroup Digital Instagram">
+                                          <svg width="24" height="24">
+                                             <image xlink:href="img/instagram.svg" src="img/instagram.png" width="24" height="24" />
+                                         </svg>
+                                         </a>
+                                     </div>
+                                     <div class="icon">
+                                          <a href="https://www.github.com/playgroupdigital" title="Playgroup Digital GitHub"><svg width="24" height="24">
+                                             <image xlink:href="img/github.svg" src="img/github.png" width="24" height="24" />
+                                         </svg>
+                                         </a>
+                                     </div>
+                        </div>
+
+
         </div>
 
         </footer>
+        <section class="bottom anim fadeIn" data-wow-duration="1s" >
+            <div class="p-logo">
+            <span class="rule">&nbsp;</span>
+                <a href="http://www.playgroup.com" title="Playgroup">
+                <svg width="25" height="25">
+                <image xlink:href="img/playgroup.svg" src="img/playgroup.png" width="25" height="25" />
+                                         </svg>
+                                         </a>
+                                     </div>
+        </section>
 
 
 
@@ -72,9 +144,29 @@ It might even fade in, all fancy-like.</h1>
 
 
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+
         <script src="js/plugins.js"></script>
         <script src="js/scripts.js"></script>
+        <script src="js/vendor/wow.min.js"></script>
+        <script>window.viewportUnitsBuggyfill.init();</script>
+<!--[if gt IE 9]><!-->
+
+
+<script>
+  wow = new WOW(
+    {
+      boxClass:     'anim',      // default
+      animateClass: 'animated', // default
+      offset:       0,          // default
+      mobile:       true,       // default
+      live:         true        // default
+    }
+  )
+  wow.init();
+</script>
+<!--<![endif]-->
+<script src="js/vendor/respond.js"></script>
+
     </body>
 </html>

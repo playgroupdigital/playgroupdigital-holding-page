@@ -1,7 +1,9 @@
 footer {
-  margin: $gutter;
   @include outer-container();
-  @include row();
+  @include pad( 0 default 0 default);
+  margin-top: $gutter;
+
+
   font-family: $font-family;
   font-weight: $base-font-weight;
     @include media ($tablet){
@@ -24,8 +26,8 @@ footer {
 }
 
   @include media ($tablet){
-    @include span-columns(5);
-    @include omega();
+    @include span-columns(4);
+
   }
   @include media ($desktop){
     @include span-columns(3);
@@ -40,14 +42,17 @@ footer {
   @include media ($mobile){
     @include span-columns (4);
     @include omega();
-  }
+    margin-top:$gutter*2;
+      }
 
   @include media ($tablet){
-    @include span-columns(7);
+    @include span-columns(8);
+    @include omega();
 
   }
   @include media ($desktop){
     @include span-columns(6);
+    @include omega();
   }
 
 }
@@ -58,20 +63,71 @@ footer {
 .right {
   @include pad();
   @include media ($mobile){
-  @include span-columns (2 of 4);
-  @include shift(1);
+  @include span-columns (4 of 4);
+  @include pad(default default 0 default);
+  margin-top: $gutter;
 
 
   }
 
   @include media ($tablet){
-  @include span-columns (6);
-  @include shift(3);
+  @include span-columns (12);
+  @include pad( default default 0 default);
+  margin-top: $gutter;
+
   }
   @include media ($desktop){
-    @include span-columns(3);
-     @include shift(0);
+  @include span-columns(3);
+  @include pad(default default 0 default);
+
   }
+
+  .icon-wrap {
+    @include span-columns (3 of 3);
+    margin: 0 auto;
+    @include media ($mobile){
+    @include pad(default 0 0 0);
+    @include span-columns (4 of 4);
+    border-top: 1px solid #dadada;
+
+
+
+  }
+  @include media ($tablet){
+    @include pad( default default 0 default);
+    @include span-columns (12 of 12);
+    border-top: 1px solid #dadada;
+
+
+
+  }
+
+  }
+
+
+
+  .icon {
+
+@include media ($mobile){
+     @include pad($gutter*2 default);
+   }
+    @include span-columns (1 of 3);
+  @include media ($tablet){
+     @include pad();
+   }
+
+  }
+
+  .icon svg {
+        display: block;
+    width: 24px;
+     margin: 0 auto;
+
+  }
+
+
+
+
 
 }
 
@@ -85,10 +141,13 @@ footer {
 
 }
   #mailchimp input {
-    border: medium none;
+    border: 1px none;
+
      @include media ($mobile){
-    @include span-columns(4 of 4);
+    @include span-columns(3 of 4);
     @include omega();
+     -webkit-appearance: none;
+    border-radius: 0;
     }
 
     @include media ($tablet){
@@ -97,6 +156,7 @@ footer {
 
     @include media ($desktop){
     @include span-columns(3 of 6);
+
   }
 
 
@@ -104,9 +164,13 @@ footer {
   }
 #mailchimp input.email, #mailchimp input.name  {
 
-  color: #dadada;
-  border-bottom: 1px solid #dadada;
+
    @include pad( default default default 0);
+   @include media ($mobile){
+  @include pad($gutter default default 0);
+  }
+    color: #dadada;
+     border-bottom: 1px solid #dadada;
 
 
 
@@ -114,7 +178,8 @@ footer {
 
 }
 
-#mailchimp input.name {
+#mailchimp input.email {
+
     @include media ($tablet){
   @include omega();
   }
@@ -127,7 +192,7 @@ footer {
 
 
 #mailchimp input[type="submit"] {
-  @include pad( 0 0 default 0);
+  @include pad( default 0 default 0);
   margin-top: $gutter;
   background: #fff;
   color: $grey;
@@ -137,6 +202,10 @@ footer {
   background: none;
   cursor: pointer;
   clear: both;
+  @include media($mobile){
+    @include pad( default 0 $gutter*2 0);
+  }
+
 
 
 }
@@ -144,6 +213,66 @@ footer {
 
 }
 
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+}
 
 
-textarea, input { outline: none; }
+
+textarea, input { outline: none;     -webkit-appearance: none;
+    border-radius: 0; }
+
+
+
+
+
+.bottom {
+   @include outer-container();
+    @include pad();
+
+    @include media ($mobile){
+    @include pad(0 default default default);
+  }
+
+
+
+
+
+  .p-logo {
+    @include pad( 0 default default);
+    @include span-columns(12);
+    @include media ($mobile){
+      @include span-columns(4);
+    @include pad( );
+  }
+  }
+
+   .p-logo a svg{
+
+  @include media ($mobile){
+     display: block;
+     margin:0 auto;
+     @include pad( $gutter 0 $gutter*2 0);
+
+  }
+   @include media ($tablet){
+     display: block;
+     margin:0 auto;
+     @include pad( $gutter 0 $gutter 0);
+  }
+
+    @include media ($desktop){
+       @include span-columns(1 of 12);
+  }
+
+
+
+  }
+  .p-logo .rule{
+    @include span-columns(12 of 12);
+    @include omega();
+    @include pad(0 default $gutter*2 default);
+    border-top: 1px solid #dadada;
+
+  }
+}
